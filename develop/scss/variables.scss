@@ -1,0 +1,66 @@
+$xsm: "(max-width: 768px)";
+$sm: "(min-width: 768px) and (max-width: 992px)";
+$md: "(min-width: 992px) and (max-width: 1200px)";
+$lg: "(min-width: 1200px)";
+
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
+$base-font-size: 16px;
+$roboto: Roboto, Helvetica, Arial, sans-serif;
+$opsans: 'Open Sans', Helvetica, Arial, sans-serif;
+$ubuntu: 'Ubuntu', Helvetica, Arial, sans-serif;
+
+$themecolor: #03a9f5;
+$darktext: #131313;
+$lighttext: #fff;
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin container($h-padding: 90px) {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding-left: $h-padding;
+  padding-right: $h-padding;
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@mixin heading {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #191919;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}

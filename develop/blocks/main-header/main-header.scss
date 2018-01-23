@@ -1,0 +1,139 @@
+.main-header {
+	width: 100%;
+	position: relative;
+	padding: 20px 0 25px;
+
+	font-family: $ubuntu;
+
+	background-color: transparent;
+}
+
+.main-header__container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.main-header__col {
+	flex: 0 0 auto;
+	margin-right: 25px;
+	margin-bottom: 65px;
+
+	font-size: 16px;
+	line-height: 25px;
+	color: $darktext;
+	font-weight: 300;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.main-header__logo {
+	width: 189px;
+	height: 68px;
+
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.main-header__address {
+	position: relative;
+	padding-left: 45px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 29px;
+		height: 40px;
+		background-image: url('../images/pointer_tr.png');
+		background-size: contain;
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+}
+
+
+.main-header__schedule {
+	position: relative;
+	padding-left: 55px;
+	
+	&::after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 40px;
+		height: 40px;
+
+		background-image: url('../images/time.png');
+		background-size: contain;
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+}
+
+.main-header__contacts {
+	position: relative;
+	padding-left: 55px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url('../images/call.png');
+		background-size: contain;
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+}
+
+.main-header__tel {
+	font-weight: 400;
+}
+
+.main-header__appeal {
+	display: inline-block;
+	position: relative;
+	color: $darktext;
+	font-weight: 300;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+
+		border-bottom: 1px dashed $themecolor;
+
+		transition: border-bottom-color 300ms ease;
+	}
+	
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+
+		&::after {
+			border-bottom-color: darken($color: $themecolor, $amount: 20%);
+		}
+	};
+}
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 480px) {
+	
+}

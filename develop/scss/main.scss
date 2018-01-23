@@ -1,0 +1,10 @@
+@import "includes/fonts.scss";
+@import "variables.scss";
+@import "includes/normalize.scss";
+@import "sprite.scss";
+
+@import "../blocks/**/*";
+
+html, body {
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+mixin main-header()
+	+b.HEADER.main-header
+		+inner
+			+e.container
+				+e.col
+					+e.logo
+						img(src="images/logo.png", alt="Логотип сервис-центра Ирем")
+				+e.col
+					+e.address
+						| Пушкин <br>
+						| ул.Мицелярная д.102
+				+e.col
+					+e.schedule
+						| Работаем без выходных<br>
+						| Время работы: с 7-00 до 22-00 
+				+e.col
+					+e.contacts
+						+e.tel 8 (800) 555-55-550
+						+e.A.appeal(href='#modal1' data-toggle="modal" data-target="#modal1") Заказать звонок
+			+main-nav
+					
