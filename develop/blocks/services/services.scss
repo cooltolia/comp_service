@@ -1,0 +1,70 @@
+.services {
+    width: 100%;
+    padding-top: 95px;
+
+    font-family: $ubuntu;
+
+    background-color: #fafafa;
+}
+
+.services__title {
+    margin-bottom: 95px;
+}
+
+.services__list {
+    list-style: none;
+    padding: 0 55px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.services__item {
+    position: relative;
+    width: 30%;
+    flex: 1 1 auto;
+    padding: 65px 20px 40px;
+    margin: 2px;
+
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.05);
+    border-radius: 3px;
+    background-color: #fff;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 128px;
+        height: 128px;
+        top: 70px;
+        left: 50px;
+        border-radius: 50%;
+        background-color: #fafafa;
+    }
+}
+
+.services__icon {
+    position: relative;
+    z-index: 2;
+    width: 160px;
+    height: 145px;
+    margin: 0 auto 45px;
+
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    
+}
+
+.services__text {
+    color: $darktext;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+}

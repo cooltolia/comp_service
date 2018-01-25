@@ -8,63 +8,77 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .advantages__item {
-    padding-left: 50px;
-    margin-bottom: 45px;
+    width: 33%;
+    flex: 1 1 auto;
+    margin-right: 30px;
+    margin-bottom: 10px;
 
     &:last-child {
-        margin-bottom: 0;
+        margin-right: 0;
     }
 }
 
-.advantages__title {
-    position: relative;
-    margin-bottom: 12px;
+.advantages__icon {
+    width: 90px;
+    height: 65px;
+    margin: 0 auto 25px;
 
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
+    background-image: url('../images/advantage1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 86px;
-        height: 2px;
-        bottom: -3px;
-        left: -50px;
+.advantages__item:nth-child(2) .advantages__icon {
+    background-image: url('../images/advantage2.png');
+}
 
-        background-color: $themecolor;
-    }
+.advantages__item:nth-child(3) .advantages__icon {
+    background-image: url('../images/advantage3.png');
 }
 
 .advantages__text {
-    color: #fff;
-    font-size: 15px;
+    color: $lighttext;
+    font-size: 18px;
     font-weight: 300;
+    line-height: 28px;
+}
+
+@media (max-width: 768px) {
+    
 }
 
 @media (max-width: 480px) {
-    .advantages__item {
-        padding-left: 10px;
-        margin-bottom: 25px;
+    .advantages__list {
+        display: block;
     }
 
-    .advantages__title {
-        padding-left: 10px;
-        margin-bottom: 5px;
+    .advantages__item {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 25px;
 
-        font-size: 14px;
-
-        &::after {
-            width: 42px;
-            left: -10px;
+        &:last-child {
+            margin-right: auto;
         }
     }
 
+    .advantages__icon {
+        width: 70px;
+        height: 55px;
+        margin-bottom: 15px;
+        
+        background-size: contain;
+    }
+
     .advantages__text {
-        font-size: 12px;
+        font-size: 15px;
+        line-height: 18px;
     }
 }

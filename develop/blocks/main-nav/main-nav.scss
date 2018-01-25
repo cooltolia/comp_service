@@ -1,6 +1,6 @@
 .main-nav {
-    position: absolute;
-    bottom: -40px;
+    position: relative;
+    margin-bottom: -40px;
     width: 100%;
 
     background-color: $themecolor;
@@ -37,5 +37,25 @@
     &:focus {
         color: $darktext;
         text-decoration: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav__list {
+        padding: 0 20px;
+    }
+
+    .main-nav__item {
+        padding: 15px 7px;
+    }
+
+    .main-nav__link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav {
+        margin-bottom: -25px;
     }
 }

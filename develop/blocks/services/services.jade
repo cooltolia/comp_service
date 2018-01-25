@@ -1,0 +1,12 @@
+-var services = [{text:'Ремонт телефонов', icon:'../images/service1.png'}, {text:'Ремонт планшетов', icon:'../images/service2.png'}, {text:'Ремонт ноутбуков', icon:'../images/service3.png'}, {text:'Ремонт компьютеров', icon:'../images/service4.png'}, {text:'Ремонт продукции Apple', icon:'../images/service5.png'}, {text:'Ремонт телевизоров', icon:'../images/service6.png'}]
+
+mixin services()
+    +b.SECTION.services
+        +inner
+            +e.title
+                +title Наши услуги
+            +e.UL.list
+                for service in services
+                    +e.LI.item
+                        +e.icon(style='background-image: url("#{service.icon}")')
+                        +e.text #{service.text}
