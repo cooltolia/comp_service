@@ -1,0 +1,47 @@
+.appeal {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 85px;
+
+    font-family: $ubuntu;
+    background-color: $themecolor;
+}
+
+.appeal__title {
+    margin-bottom: 10px;
+
+    .title {
+        color: $lighttext;
+    }
+}
+
+.appeal__subtitle {
+    margin-bottom: 85px;
+
+    color: $lighttext;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.appeal__form {
+    width: 470px;
+    margin: 0 auto;
+}
+
+.appeal__input {
+    width: 100%;
+    padding: 20px 35px;
+
+    color: $darktext;
+    font-size: 15px;
+    font-weight: 400;
+    
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 31px;
+
+    &::placeholder {
+        color: #888;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,10 @@
+mixin appeal()
+    +b.SECTION.appeal
+        +inner
+            +e.title
+                +title Получите купон на 500 рублей 
+            +e.subtitle
+                | при первом обращение в наш сервисный центр
+            +e.form(action='#' method='post')
+                +e.INPUT.input(type='tel' placeholder='8 (___) ___ __ __')
+                +e.BUTTON.submit(type='submit') Отправить
