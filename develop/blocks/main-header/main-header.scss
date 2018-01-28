@@ -112,8 +112,9 @@
 	&::after {
 		content: '';
 		position: absolute;
+		width: 100%;
 		left: 0;
-		bottom: -3px;
+		bottom: -2px;
 
 		border-bottom: 1px dashed $themecolor;
 

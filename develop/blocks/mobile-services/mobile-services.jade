@@ -1,0 +1,18 @@
+-var brands = ['Samsung', 'iphone', 'Xiaomi', 'Meizu', 'ASUS', 'НТС', 'Huawei', 'LG', 'Sony', 'Nexus']
+-var crashes = ['Замена дисплея', 'Замена корпуса', 'Замена аккумулятора', 'Замена основной камеры', 'Замена кнопок громкости', 'Замена кнопки включения', 'Замена слухового динамика', 'Замена микрофона', 'Замена кнопки вибро', 'Замена кнопки home', 'Замена разьема наушников', 'Замена полифонического динамика', 'Замена разъема зарядки', 'Замена передней камеры', 'Пайка', 'Перепрошивка']
+
+mixin mobile-services()
+    +b.SECTION.mobile-services
+        +inner
+            +e.title
+                +title Ремонт любой марки и модели телефонов
+            +e.brands
+                +e.UL.brands-list
+                    for brand in brands
+                        +e.LI.brands-item= brand
+            +e.crashes
+                +e.crashes-title Популярные поломки
+                +e.UL.crashes-list
+                    for crash in crashes
+                        +e.LI.crashes-item= crash
+

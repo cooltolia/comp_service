@@ -13,7 +13,7 @@
 .spots__list {
     list-style: none;
     padding: 0 50px;
-    margin-bottom: 110px;
+    margin-bottom: 70px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -24,6 +24,7 @@
     position: relative;
     padding-left: 65px;
     margin-right: 25px;
+    margin-bottom: 40px;
     color: $darktext;
     font-size: 20px;
     font-weight: 400;
@@ -53,6 +54,55 @@
     background-position: top left;
     background-size: auto auto;
     background-repeat: no-repeat;
+}
 
+@media (max-width: 768px) {
+    .spots__list {
+        justify-content: center;
+    }
     
+    .spots__item {
+        margin-right: 55px;
+    }
+
+    .spots__car {
+        height: 230px;
+
+        background-size: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .spots {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .spots__title {
+        margin-bottom: 25px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .spots__list {
+        margin-bottom: 0;
+        justify-content: flex-start;
+    } 
+
+    .spots__item {
+        padding-left: 45px;
+
+        font-size: 15px;
+
+        &::after {
+            width: 26px;
+            height: 33px;
+        }
+    }
+
+    .spots__car {
+        height: 130px;
+    }
 }

@@ -1,0 +1,162 @@
+.mobile-services {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 75px;
+
+    font-family: $ubuntu;
+}
+
+.mobile-services__title {
+    margin-bottom: 40px;
+}
+
+.mobile-services__brands {
+    width: 880px;
+    padding: 10px 15px;
+    margin: 0 auto 50px;
+
+    border-radius: 5px;
+    background-color: $themecolor;
+}
+
+.mobile-services__brands-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+}
+
+.mobile-services__brands-item {
+    padding: 7px 17px 8px;
+
+    color: $lighttext;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+
+    border-radius: 20px;
+
+    transition: background-color 300ms ease;
+
+    &:hover {
+        background-color: darken($color: $themecolor, $amount: 20%);
+    }
+}
+
+.mobile-services__crashes-title {
+    margin-bottom: 35px;
+
+    color: $darktext;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.mobile-services__crashes-list {
+    list-style: none;
+    width: 770px;
+    height: 380px;
+    padding: 50px 80px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.mobile-services__crashes-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+    color: $darktext;
+    font-size: 18px;
+    font-weight: 300;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-color: #b8b8b8;
+        border-radius: 50%;
+
+        transition: background-color 300ms ease;
+    }
+
+    &:hover {
+        &::after {
+            background-color: $themecolor;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-services__brands {
+        width: 90%;
+        cursor: pointer;
+    }
+
+    .mobile-services__crashes-list {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .mobile-services__crashes-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    .mobile-services__crashes-list {
+        display: block;
+        height: auto;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-services {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .mobile-services__title {
+        margin-bottom: 20px;
+    }
+
+    .mobile-services__brands {
+        padding: 5px 10px;
+        margin-bottom: 35px;
+    }
+
+    .mobile-services__crashes-title {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .mobile-services__brands-item {
+        padding: 4px 10px 4px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .mobile-services__crashes-list {
+        padding-left: 20px;
+    }
+
+    .mobile-services__crashes-item {
+        font-size: 14px;
+    }
+}

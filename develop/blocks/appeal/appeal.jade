@@ -6,5 +6,5 @@ mixin appeal()
             +e.subtitle
                 | при первом обращение в наш сервисный центр
             +e.form(action='#' method='post')
-                +e.INPUT.input(type='tel' placeholder='8 (___) ___ __ __')
+                +e.INPUT.input(type='tel' placeholder='+7 (___) ___ __ __' data-inputmask="'mask': '+7 (999) 999 99 99'")
                 +e.BUTTON.submit(type='submit') Отправить

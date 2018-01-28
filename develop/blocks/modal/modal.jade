@@ -13,7 +13,7 @@ mixin modal()
 						.modal-input-row
 							label.modal-label(for='modal_tel1') Телефон
 							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
-						button.modal-submit Узнать подробнее
+						button.modal-submit Заказать звонок
 	#modal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 		.modal-dialog(role='document')
 			.modal-content
@@ -23,18 +23,12 @@ mixin modal()
 				.modal-body
 					form.modal-form(validate='', action='#', method='post')
 						.modal-input-row
-							label.modal-label(for='modal_price') Цена квартиры по договору
-							input.modal-input(type='number' id='modal_price' name='modal_price' required)
+							label.modal-label(for='modal_name') Имя
+							input.modal-input(type='number' id='modal_name' name='modal_name')
 						.modal-input-row
-							label.modal-label(for='modal_e-date') Дата сдачи объекта (по договору)
-							input.modal-input(id='modal_e-date' name='modal_e-date' data-inputmask="'alias': 'date'" required placeholder='(dd/mm/yyyy)')
-						.modal-input-row
-							label.modal-label(for='modal_r-date') Дата сдачи объекта (фактическая)
-							input.modal-input(id='modal_r-date' name='modal_r-date' data-inputmask="'alias': 'date'" required placeholder='(dd/mm/yyyy)')
-						.modal-input-row
-							label.modal-label(for='modal_tel2') Телефон
-							input.modal-input(id='modal_tel2' name='modal_tel2' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
-						button.modal-submit Узнать сумму
+							label.modal-label(for='modal_tel1') Телефон
+							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
+						button.modal-submit Заказать диагностику
 	#modal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 		.modal-dialog(role='document')
 			.modal-content
@@ -44,15 +38,12 @@ mixin modal()
 				.modal-body
 					form.modal-form(validate='', action='#', method='post')
 						.modal-input-row
-							label.modal-label(for='modal_name3') Имя
-							input.modal-input(type='number' id='modal_name3' name='modal_name3')
+							label.modal-label(for='modal_name') Имя
+							input.modal-input(type='number' id='modal_name' name='modal_name')
 						.modal-input-row
 							label.modal-label(for='modal_tel1') Телефон
 							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
-						.modal-input-row
-							label.modal-label(for='modal_tel3') Ваш вопрос
-							textarea.modal-input(id='modal_tel3' name='modal_tel3' required)
-						button.modal-submit Узнать подробнее
+						button.modal-submit Я готов!
 	#modal4.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 		.modal-dialog(role='document')
 			.modal-content

@@ -1,23 +1,84 @@
 .testimonials {
     width: 100%;
-    padding: 65px 0;
-
-    background-color: #fcfcfc;
+    padding: 70px 0;
 
     font-family: $ubuntu;
 }
 
-.testimonials__title {
-    margin-bottom: 12px;
+.testimonials__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
-.testimonials__subtitle {
-    width: 80%;
-    margin: 0 auto 80px;
+.testimonials__item {
+    width: 28%;
+    margin: 0 2%;
+    padding: 20px 25px 15px;
 
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 5px;
+
+    transition: transform 300ms ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.testimonials__img {
+    width: 97px;
+    height: 97px;
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background-size: cover;
+}
+
+.testimonials__name {
+    position: relative;
+    margin-bottom: 30px;
+
+    color: $darktext;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 78px;
+        height: 1px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: $themecolor;
+    }
+}
+
+.testimonials__text {
+    margin: 0 0 10px;
+    
+    color: $darktext;
     font-size: 15px;
     font-weight: 300;
-    text-align: center;
+    line-height: 28px;
+}
+
+.testimonials__link {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+
+    background-image: url('../images/vk.png');
+    background-size: cover;
 }
 
 @media (max-width: 768px) {
@@ -27,6 +88,14 @@
 
     .testimonials__subtitle {
         margin-bottom: 40px;
+    }
+
+    .testimonials__item {
+        width: 40%;
+
+        &:nth-child(n+3) {
+            display: none;
+        }
     }
 }
 
@@ -39,5 +108,19 @@
         margin-bottom: 20px;
 
         font-size: 12px;
+    }
+
+    .testimonials__list {
+        flex-wrap: wrap;
+    }
+
+    .testimonials__item {
+        width: 300px;
+        max-width: 300px;
+        margin: 0 auto 25px;
+
+        &:nth-child(n+3) {
+            display: block;
+        }
     }
 }

@@ -1,9 +1,23 @@
 mixin testimonials()
-    +b.SECTION.testimonials
+    +b.SECTION.testimonials#testimonials
         +inner
-            +e.title
-                +title Отзывы тех, кто уже получили свои деньги
-            +e.H4.subtitle с сохранением авторских орфографии и пунктуации
-            +e.slider
-                +slider
+            +e.list
+                +e.item
+                    +e.img(style='background-image: url("images/client1.png")')
+                    +e.name Дмитриев Алексей
+                    +e.P.text
+                        | Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности напрямую зависит от экономической целесообразности решений!
+                    +e.link(href='vk.com' title='Ссылка на профиль')
+                +e.item
+                    +e.img(style='background-image: url("images/client2.png")')
+                    +e.name Болотская Елена
+                    +e.P.text
+                        | Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности напрямую зависит от экономической целесообразности решений!
+                    +e.link(href='vk.com' title='Ссылка на профиль')
+                +e.item
+                    +e.img(style='background-image: url("images/client3.png")')
+                    +e.name Верставая Анна
+                    +e.P.text
+                        | Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности напрямую зависит от экономической целесообразности решений!
+                    +e.A.link(href='vk.com' title='Ссылка на профиль')
         

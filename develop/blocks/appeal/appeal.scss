@@ -25,6 +25,7 @@
 }
 
 .appeal__form {
+    position: relative;
     width: 470px;
     margin: 0 auto;
 }
@@ -36,12 +37,54 @@
     color: $darktext;
     font-size: 15px;
     font-weight: 400;
-    
+
     box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border: none;
     border-radius: 31px;
 
     &::placeholder {
         color: #888;
         font-weight: 300;
+    }
+}
+
+.appeal__submit {
+    position: absolute;
+    width: 30px;
+    height: 21px;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+
+    border: none;
+    background-color: transparent;
+
+    background-image: url('../images/arrow.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    text-indent: -99999px
+}
+
+@media (max-width: 480px) {
+    .appeal {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .appeal__subtitle {
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+
+    .appeal__form {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .appeal__input {
+        padding: 15px 35px 15px 25px;
     }
 }

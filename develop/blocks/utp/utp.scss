@@ -1,0 +1,50 @@
+.utp {
+    width: 100%;
+    padding: 45px 0 65px;
+
+    font-family: $ubuntu;
+    color: $darktext;
+}
+
+.utp__title {
+    margin-bottom: 5px;
+}
+
+.utp__subtitle {
+    display: block;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.utp__text {
+    display: block;
+
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .utp__subtitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .utp {
+        padding: 25px 0 35px;
+    }
+
+    .utp__subtitle {
+        margin-bottom: 20px;
+
+        font-size: 16px;
+    }
+
+    .utp__text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,155 @@
+.form-price {
+    width: 100%;
+    padding: 45px 0 30px;
+
+    font-family: $ubuntu;
+
+    background-color: $themecolor;
+}
+
+.form-price__title {
+    margin-bottom: 45px;
+
+    .title {
+        color: $lighttext;
+    }
+}
+
+.form-price__form {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto
+}
+
+.form-price__row {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+    font-size: 15px;
+
+    &:last-of-type {
+        margin-bottom: 45px;
+    }
+}
+
+.form-price__select {
+    width: 100%;
+    padding: 16px 30px 15px 20px;
+    appearance: none;
+
+    color: $darktext;
+    font-weight: 300;
+
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+
+    background-image: url('../images/select.png');
+    background-size: 10px 17px;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    &:invalid {
+        color: #888;
+    }
+}
+
+.form-price__input {
+    width: 100%;
+    padding: 16px 30px 15px 20px;
+
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+
+    color: $darktext;
+    font-weight: 300;
+
+    &::placeholder {
+        color: #888;
+    }
+}
+
+.form-price__textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 80px;
+    padding: 16px 30px 15px 20px;
+
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+
+    color: $darktext;
+    font-weight: 300;
+
+    &::placeholder {
+        color: #888;
+    }
+}
+
+.form-price__button {
+    width: 265px;
+    height: 50px;
+    margin: 0 auto;
+
+    box-shadow: 0 10px 23px 3px rgba(86, 86, 86, 0.06);
+    border-radius: 25px;
+    border: 1px solid darken($color: $themecolor, $amount: 18%);
+    background-color: darken($color: $themecolor, $amount: 18%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $lighttext;
+    font-size: 18px;
+    font-weight: 300;
+
+    transition: background-color 300ms ease;
+
+    &:hover,
+    &:active {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-price {
+        padding: 25px 0 20px;
+    }
+
+    .form-price__title {
+        margin-bottom: 25px;
+    }
+
+    .form-price__row {
+        font-size: 13px;
+        
+        &:last-of-type {
+            margin-bottom: 25px;
+        }
+    }
+
+    .form-price__select,
+    .form-price__input,
+    .form-price__textarea {
+        padding: 12px 30px 10px 15px;
+    }
+
+    .form-price__button {
+        width: 100%;
+        max-width: 265px;
+        height: 40px;
+
+        font-size: 15px;
+    }
+}

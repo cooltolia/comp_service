@@ -219,6 +219,9 @@
     
 
     
+    
+
+    
     // (function() {
 
     //     var $mainNav = $('.main-nav');
@@ -236,6 +239,174 @@
     // })()
 
     
+    var adress;
+
+    adress = [59.9315411964636,30.351687840589967];
+
+    
+
+    ymaps.ready(function () {
+
+      var myMap;
+
+      
+
+      ymaps.geocode(adress).then(function (res) {
+
+          myMap = new ymaps.Map('map', {
+
+              center: res.geoObjects.get(0).geometry.getCoordinates(),
+
+              zoom : 16
+
+          });
+
+          var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+                hintContent: 'Собственный значок метки',
+
+                balloonContent: 'Это красивая метка'
+
+            }, {
+
+                // Опции.
+
+                // Необходимо указать данный тип макета.
+
+                iconLayout: 'default#image',
+
+                // Своё изображение иконки метки.
+
+                iconImageHref: '../images/pointer_tr.png',
+
+                // Размеры метки.
+
+                iconImageSize: [30,40],
+
+                // Смещение левого верхнего угла иконки относительно
+
+                // её "ножки" (точки привязки).
+
+                iconImageOffset: [-15, -40]
+
+            });
+
+        
+
+        myMap.geoObjects.add(myPlacemark);
+
+        myMap.behaviors.disable('scrollZoom');
+
+        });
+
+      
+
+    });
+
+    
+    
+
+    
+    ; (function () {
+
+    
+
+        $brandsList = $('.mobile-services__brands-list');
+
+    
+
+        // function and variables, 'unslick' while window size reach maximum width
+
+        var maxWidth = 768,
+
+            slickObject = {
+
+                infinite: true,
+
+                slidesToShow: 3,
+
+                slidesToScroll: 2,
+
+                arrows: false,
+
+                autoplay: true,
+
+                autoplaySpeed: 2000,
+
+                mobileFirst: true,
+
+                responsive: [
+
+                    {
+
+                        breakpoint: 480,
+
+                        settings: {
+
+                            slidesToShow: 6,
+
+                            slidesToScroll: 3
+
+                        }
+
+                    },
+
+                    {
+
+                        breakpoint: maxWidth,
+
+                        settings: 'unslick'
+
+                    },
+
+    
+
+                ]
+
+            },
+
+            runSlick = function () {
+
+                $brandsList.slick(slickObject);
+
+            };
+
+    
+
+        // slick initialization while document ready
+
+        runSlick();
+
+    
+
+        // listen to jQuery's window resize
+
+        $(window).on('resize', function () {
+
+    
+
+            if ($brandsList.hasClass('slick-initialized')) return;
+
+            var width = $(window).width();
+
+            if (width < maxWidth) {
+
+                // reinit slick while window's width is less than maximum width
+
+                runSlick();
+
+            }
+
+        });
+
+    
+
+    
+
+    })();
+
+    
+
     
 
     
@@ -254,7 +425,7 @@
     
 
     
-    (function() {
+    ;(function() {
 
     
 
@@ -268,7 +439,7 @@
 
             spotsOffset = $spots.offset(),
 
-            spotsTopPosition = spotsOffset.top - spotsHeight;
+            spotsTopPosition = spotsOffset.top - spotsHeight / 2;
 
     
 
@@ -284,13 +455,27 @@
 
                 var dynamic = wScroll - spotsTopPosition;
 
+    
+
+                if ($(window).width() < 480) {
+
+                    $car.css({
+
+                        'background-position': dynamic / 3 + '% top'
+
+                    })
+
+                } else {
+
+                    $car.css({
+
+                        'background-position': dynamic / 7 + '% top'
+
+                    })
+
+                }
+
                 
-
-                $car.css({
-
-                    'background-position': dynamic / 5 + '% top'
-
-                })
 
             }
 
@@ -301,6 +486,9 @@
     
 
     })();
+
+    
+    
 
     
     

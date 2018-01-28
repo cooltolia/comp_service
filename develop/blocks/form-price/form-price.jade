@@ -1,0 +1,18 @@
+-var brands = ['Samsung', 'iphone', 'Xiaomi', 'Meizu', 'ASUS', 'НТС', 'Huawei', 'LG', 'Sony', 'Nexus']
+
+mixin form-price()
+    +b.SECTION.form-price
+        +inner
+            +e.title
+                +title Узнайте точную стоимость ремонта Вашего телефона
+            +e.FORM.form(method='post' action='#')
+                +e.row
+                    +e.SELECT.select( name='fix-brand' required)
+                        +e.OPTION.option(disabled selected value='') Выберите бренд телефона
+                        for brand in brands
+                            +e.OPTION.option(value='#{brand}')= brand
+                +e.row
+                    +e.INPUT.input(name='fix-name' data-inputmask="'mask': '+7 (999) 999 99 99'" placeholder='+7 (___) ___ __ __' required)
+                +e.row
+                    +e.TEXTAREA.textarea(name='fix-problem' placeholder='Опишите Вашу проблему' required)
+                +e.BUTTON.button(type='submit') Узнать точную стоимость!

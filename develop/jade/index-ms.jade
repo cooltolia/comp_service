@@ -1,0 +1,22 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var alias = "m"
+- var theme = 'телефона'
+doctype
+html(lang='ru')
+	+doc-header
+	body.pageload.no-js
+		+main-header
+		+f-screen
+		+mobile-services
+		+form-price
+		+masters
+		+spots
+		+testimonials
+		+steps
+		+utp
+		+map
+		+main-footer
+		+modal
+		+doc-footer
