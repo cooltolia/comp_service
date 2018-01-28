@@ -277,7 +277,7 @@
 
                 // Своё изображение иконки метки.
 
-                iconImageHref: '../images/pointer_tr.png',
+                iconImageHref: 'images/pointer_tr.png',
 
                 // Размеры метки.
 

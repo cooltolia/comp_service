@@ -17,7 +17,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../images/pointer_tr.png',
+            iconImageHref: 'images/pointer_tr.png',
             // Размеры метки.
             iconImageSize: [30,40],
             // Смещение левого верхнего угла иконки относительно
